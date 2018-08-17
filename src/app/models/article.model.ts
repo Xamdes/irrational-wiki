@@ -1,8 +1,6 @@
 export class Article
 {
-
-
-  constructor(public title: string = 'Ipsum', public paragraphs: string[] = ['snippet']) {
+  constructor(public title: string = 'Ipsum',public id: number = 0, public paragraphs: string[] = ['snippet']) {
   }
 
   getSnippet()
@@ -18,5 +16,10 @@ export class Article
   getParagraphs()
   {
     return this.paragraphs;
+  }
+
+  getId()
+  {
+    return this.id;
   }
 }
