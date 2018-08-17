@@ -1,3 +1,5 @@
 <div class="">
+  <h5><a routerLink="/article" routerLinkActive="active">{{childArticle.title}}</a><router-outlet></router-outlet></h5>
+
   <p *ngFor="let p of childArticle.getParagraphs()">{{p}}</p>
 </div>
