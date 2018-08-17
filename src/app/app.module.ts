@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DisplayArticleComponent } from './display-article/display-article.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DatabaseComponent } from './database/database.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DisplayArticleComponent
+    DisplayArticleComponent,
+    DatabaseComponent
   ],
   imports: [
     BrowserModule,
