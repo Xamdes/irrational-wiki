@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Article } from '../models/article.model';
 
 @Component({
@@ -9,6 +11,11 @@ import { Article } from '../models/article.model';
 export class DisplayArticleComponent {
 
   @Input() childArticle: Article;
+
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location
+  ) {}
 
 
 }
