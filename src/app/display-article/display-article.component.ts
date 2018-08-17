@@ -17,5 +17,10 @@ export class DisplayArticleComponent {
     private location: Location
   ) {}
 
+  isValid()
+  {
+    return this.childArticle.getId() != -1;
+  }
+
 
 }

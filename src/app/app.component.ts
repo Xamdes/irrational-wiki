@@ -22,14 +22,10 @@ export class AppComponent {
     return this.articles[0];
   }
 
-  getArticleById(id: number)
+  getArticleById(getId: number)
   {
-    this.articles.forEach(function(article){
-      if(article.id === id)
-      {
-        return article;
-      }
-    });
-    return new Article(`Article with id: ${id} not found`,5,['']);
+    let pos = this.articles.map(function(e) { return e.id; }).indexOf(getId);
+    return this.articles[pos];
+    // return new Article(`Article with id: ${id} not found`,-1,['']);
   }
 }
