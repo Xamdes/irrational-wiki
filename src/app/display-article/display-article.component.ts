@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Article } from '../models/article.model';
 
 @Component({
@@ -6,9 +6,9 @@ import { Article } from '../models/article.model';
   templateUrl: './display-article.component.html',
   styleUrls: ['./display-article.component.css']
 })
-export class DisplayArticleComponent implements OnInit {
+export class DisplayArticleComponent {
 
-  constructor() { }
+  @Input() childArticle: Article;
 
 
 }
