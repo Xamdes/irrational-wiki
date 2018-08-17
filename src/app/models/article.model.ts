@@ -12,4 +12,9 @@ export class Article
   {
     this.paragraphs.push(paragraph);
   }
+
+  getParagraphs()
+  {
+    return this.paragraphs;
+  }
 }
