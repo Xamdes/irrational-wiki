@@ -20,6 +20,12 @@
   * Portals and Articles Section
     * Separated content based on an overall theme
 
+  * Component List
+    * Display-Article
+
+  * Model List
+    * Article
+
 ## Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
