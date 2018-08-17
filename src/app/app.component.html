@@ -4,6 +4,7 @@
     <div class="col-md-6">
       <h4>About {{title}}</h4>
       <h4>Random featured article</h4>
+      <app-display-article [childArticle]="featuredArticle"></app-display-article>
       <h4>Participate in {{title}}</h4>
     </div>
     <div class="col-md-6">
@@ -11,6 +12,6 @@
       <p>{{featuredArticle.getSnippet()}}</p>
       <h4>Portals and Articles</h4>
     </div>
-    <app-display-article [childArticle]="featuredArticle"></app-display-article>
+
   </div>
 </div>

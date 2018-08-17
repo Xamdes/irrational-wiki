@@ -1,6 +1,8 @@
 export class Article
 {
-  constructor(public paragraphs: string[] = ['snippet']) {
+
+
+  constructor(public title: string = 'Ipsum', public paragraphs: string[] = ['snippet']) {
   }
 
   getSnippet()
