@@ -1,5 +1,29 @@
 # IrrationalWiki
 
+## Author
+
+  * Steven Colburn
+
+## Created
+
+8/17/2018
+
+## Specs
+
+  * Website will be based on the RationalWiki at https://rationalwiki.org/wiki/Main_Page
+    * Making website with irrational content though.
+  * Build main page structure
+  * Random Featured Article
+  * About the purpose for the wiki
+  * Links for participating in the creation and updating of articles
+  * Feature Content Section
+  * Portals and Articles Section
+    * Separated content based on an overall theme
+
+
+
+## Angular
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
