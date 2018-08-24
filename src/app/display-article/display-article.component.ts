@@ -17,12 +17,12 @@ export class DisplayArticleComponent {
 
   isValid()
   {
-    return this.childArticle.getId() != -1;
+    return true;
   }
 
   goToDetailPage(clickedArticle: Article)
   {
-    this.router.navigate(['articles', clickedArticle.id]);
+    this.router.navigate(['articles', clickedArticle.title]);
   };
 
 
