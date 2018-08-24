@@ -8,6 +8,26 @@
 
 8/17/2018
 
+## Working List
+
+  * Can interface with firebase
+    * Can retrieve files from database
+    * CRUD not completey implemented
+  * Routing works
+    * Route will be based on title of article
+      * spaces will be represented by underscores _
+  * Add Users (pending)
+  * Images (pending)
+
+## Instructions
+
+  * Clone project from https://github.com/Xamdes/irrational-wiki.git
+  * Go to firebase
+  * Create a Realtime Database
+    * Database should be named "irrational-wiki"
+  * Upload JSON file from irrational-wiki/samples/articles.json
+  * Run Project using ng serve --open
+
 ## Specs
 
   * Website will be based on the RationalWiki at https://rationalwiki.org/wiki/Main_Page

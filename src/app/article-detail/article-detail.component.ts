@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable } from 'angularfire2/database';
+import { ArticleService } from '../article.service';
 import { Location } from '@angular/common';
 import { Article } from '../models/article.model';
 
@@ -11,8 +14,7 @@ import { Article } from '../models/article.model';
 export class ArticleDetailComponent implements OnInit
 {
   articleId: string = "";
-
-
+  articles: FirebaseListObservable<any[]>;
   constructor(private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit()
