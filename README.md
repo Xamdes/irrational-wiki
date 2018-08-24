@@ -6,36 +6,36 @@
 
 ## Created
 
-8/17/2018
+8/17/2018  
 
 ## Task List
 
-  [x] Can interface with firebase
-  [x] Can read files from database
-  [] CRUD not completey implemented
-    * Create, Read, Update, Destroy
-  [x] Routing works
-    * Route will be based on title of article
-      * spaces will be represented by underscores _
-  [] Add Users
-  [] Images
+  [x] Can interface with firebase  
+  [x] Can read files from database  
+  [] CRUD not completey implemented  
+    * Create, Read, Update, Destroy  
+  [x] Routing works  
+    * Route will be based on title of article  
+      * spaces will be represented by underscores _  
+  [] Add Users  
+  [] Images  
 
 ## Instructions
 
-  * Clone project from https://github.com/Xamdes/irrational-wiki.git
+  * Clone project from https://github.com/Xamdes/irrational-wiki.git 
   * Go to firebase
   * Create a Realtime Database
     * Database should be named "irrational-wiki"
   * Upload JSON file from irrational-wiki/samples/articles.json
   * Create an api-keys.ts file in irrational-wiki/src/app/
-      > export const masterFirebaseConfig = {
-      > apiKey: "AIzaSyAaHt2jomYMsOOSKirlY3X_8mUytPqhT9c",
-      > authDomain: "irrational-wiki.firebaseapp.com",
-      > databaseURL: "https://irrational-wiki.firebaseio.com",
-      > projectId: "irrational-wiki",
-      > storageBucket: "irrational-wiki.appspot.com",
-      > messagingSenderId: "474537332218"
-      > };
+      > export const masterFirebaseConfig = {  
+      > apiKey: "AIzaSyAaHt2jomYMsOOSKirlY3X_8mUytPqhT9c",  
+      > authDomain: "irrational-wiki.firebaseapp.com",  
+      > databaseURL: "https://irrational-wiki.firebaseio.com",  
+      > projectId: "irrational-wiki",  
+      > storageBucket: "irrational-wiki.appspot.com",  
+      > messagingSenderId: "474537332218"  
+      > };  
   * Run Project using ng serve --open
 
 ## Specs
