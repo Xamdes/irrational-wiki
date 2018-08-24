@@ -1,19 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { DisplayArticleComponent } from './display-article/display-article.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { DatabaseComponent } from './database/database.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayArticleComponent,
-    DatabaseComponent
+    DatabaseComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
