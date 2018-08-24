@@ -8,16 +8,4 @@ import { Article } from './models/article.model';
 })
 export class AppComponent {
   title: string = 'IrrationalWiki';
-  articles: Article[];
-
-  getFeaturedArticle()
-  {
-    return this.articles[0];
-  }
-
-  getArticleById(getId: number)
-  {
-    let pos = this.articles.map(function(e) { return e.id; }).indexOf(getId);
-    return this.articles[pos];
-  }
 }
