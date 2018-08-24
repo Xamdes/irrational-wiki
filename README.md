@@ -29,12 +29,12 @@
   * Upload JSON file from irrational-wiki/samples/articles.json
   * Create an api-keys.ts file in irrational-wiki/src/app/
       > export const masterFirebaseConfig = {  
-      > apiKey: "AIzaSyAaHt2jomYMsOOSKirlY3X_8mUytPqhT9c",  
-      > authDomain: "irrational-wiki.firebaseapp.com",  
-      > databaseURL: "https://irrational-wiki.firebaseio.com",  
-      > projectId: "irrational-wiki",  
-      > storageBucket: "irrational-wiki.appspot.com",  
-      > messagingSenderId: "474537332218"  
+      > apiKey: "xxxx",  
+      > authDomain: "xxxx",  
+      > databaseURL: "xxxx",  
+      > projectId: "xxxx",  
+      > storageBucket: "xxxx",  
+      > messagingSenderId: "xxxx"  
       > };  
   * Run Project using ng serve --open
 
