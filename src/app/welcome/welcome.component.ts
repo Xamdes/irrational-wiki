@@ -29,7 +29,6 @@ export class WelcomeComponent implements OnInit
     this.articleService.getArticleById(this.articleId).subscribe(dataLastEmittedFromObserver =>
     {
       this.articleToDisplay = new Article(dataLastEmittedFromObserver.title, dataLastEmittedFromObserver.author, dataLastEmittedFromObserver.paragraphs);
-      console.log(this.articleToDisplay);
     });
   }
   goToDetailPage(clickedArticle)
