@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { DisplayArticleComponent } from './display-article/display-article.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'articles/:id',
-    component: DisplayArticleComponent
+    component: ArticleDetailComponent
   }
 ];
 

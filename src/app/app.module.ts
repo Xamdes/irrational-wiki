@@ -7,13 +7,15 @@ import { DisplayArticleComponent } from './display-article/display-article.compo
 import { DatabaseComponent } from './database/database.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayArticleComponent,
     DatabaseComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import { Article } from '../models/article.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-display-article',
@@ -12,11 +11,19 @@ export class DisplayArticleComponent {
 
   @Input() childArticle: Article;
 
+  constructor(private router: Router )
+  {}
+
 
   isValid()
   {
     return this.childArticle.getId() != -1;
   }
+
+  goToDetailPage(clickedArticle: Article)
+  {
+    this.router.navigate(['articles', clickedArticle.id]);
+  };
 
 
 }
