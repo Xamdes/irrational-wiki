@@ -20,7 +20,7 @@ export class ArticleService
 
   getArticleById(getId: string)
   {
-    return this.database.object('articles/' + getId);
+    return this.database.object('articles/' + getId)
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Article } from '../models/article.model';
+import { ArticleService } from '../article.service';
 
 @Component({
   selector: 'app-article-detail',
@@ -10,16 +11,18 @@ import { Article } from '../models/article.model';
 })
 export class ArticleDetailComponent implements OnInit
 {
-  articleId: number = null;
+  articleId: string = "";
+  articleToDisplay: Article;
 
-  constructor(private route: ActivatedRoute, private location: Location) { }
+  constructor(private route: ActivatedRoute, private location: Location, private articleService) { }
 
   ngOnInit()
   {
     this.route.params.forEach((urlParameters) =>
     {
-      this.articleId = parseInt(urlParameters['id']);
-    });  
+      this.articleId = urlParameters['id'];
+    });
+    console.log(this.articleId);
   }
 
 }
