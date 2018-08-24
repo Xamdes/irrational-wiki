@@ -12,10 +12,6 @@ export class DisplayArticleComponent {
 
   @Input() childArticle: Article;
 
-  constructor(
-    private route: ActivatedRoute,
-    private location: Location
-  ) {}
 
   isValid()
   {
