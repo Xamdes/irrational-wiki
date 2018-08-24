@@ -1,0 +1,28 @@
+{
+  "articles": [{
+      "title": "Gravity",
+      "author": "James",
+      "paragraphs": [ "Intro", "Testing for Paragraph 2", "Testing for Paragraph 3" ]
+    },
+    {
+      "title": "Fire",
+      "author": "Alex",
+      "paragraphs": [ "Intro", "Testing for Paragraph 2", "Testing for Paragraph 3" ]
+    },
+    {
+      "title": "News Spin",
+      "author": "Jean",
+      "paragraphs": [ "Intro", "Testing for Paragraph 2", "Testing for Paragraph 3" ]
+    },
+    {
+      "title": "Earth",
+      "author": "Randy",
+      "paragraphs": [ "Intro", "Testing for Paragraph 2", "Testing for Paragraph 3" ]
+    },
+    {
+      "title": "Mars",
+      "author": "Eliot",
+      "paragraphs": [ "Intro", "Testing for Paragraph 2", "Testing for Paragraph 3" ]
+    }
+  ]
+}
