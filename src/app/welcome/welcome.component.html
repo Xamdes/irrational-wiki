@@ -3,12 +3,12 @@
     <div class="card col-md-6">
       <h4>About {{title}}</h4>
       <h4>Random featured article</h4>
-      <app-display-article [childArticle]="getArticleById(1)"></app-display-article>
+      <app-display-article [childArticle]="(getFeaturedArticle() | async)"></app-display-article>
       <h4>Participate in {{title}}</h4>
     </div>
     <div class="card col-md-6">
       <h4>Featured Content</h4>
-      <p>{{getFeaturedArticle().getSnippet()}}</p>
+      <p>{{(getFeaturedArticle() | async)?.getSnippet()}}</p>
       <h4>Portals and Articles</h4>
     </div>
   </div>

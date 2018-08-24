@@ -4,6 +4,8 @@ import { Article } from '../models/article.model';
 import { routing } from '../app.routing';
 import { Router } from '@angular/router';
 import { ArticleService } from '../article.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-welcome',
@@ -14,29 +16,26 @@ import { ArticleService } from '../article.service';
 export class WelcomeComponent implements OnInit
 {
   title: string = 'IrrationalWiki';
-  articles: Article[];
+  articles: FirebaseListObservable<any[]>;
+  articleId: string;
+  articleToDisplay;
 
   constructor(private router: Router, private articleService: ArticleService) { }
 
   ngOnInit()
   {
     this.articles = this.articleService.getArticles();
+    this.articleToDisplay = this.articleService.getArticleById(0);
   }
 
-  goToDetailPage(clickedArticle: Article)
+  goToDetailPage(clickedArticle)
   {
-    this.router.navigate(['articles', clickedArticle.id]);
+    this.router.navigate(['articles', clickedArticle.$key]);
   };
 
   getFeaturedArticle()
   {
-    return this.articles[0];
-  }
-
-  getArticleById(getId: number)
-  {
-    let pos = this.articles.map(function (e) { return e.id; }).indexOf(getId);
-    return this.articles[pos];
+    return this.articleToDisplay;
   }
 
 }
