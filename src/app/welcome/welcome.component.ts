@@ -3,7 +3,7 @@ import { AppComponent } from '../app.component';
 import { Article } from '../models/article.model';
 import { routing } from '../app.routing';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ArticleService } from '../article.service';
+import { ArticleService } from '../services/article.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Location } from '@angular/common';
