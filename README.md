@@ -12,12 +12,11 @@
 
   [x] Can interface with firebase  
   [x] Can read files from database  
-  [x] Create Article
-  [x] Read Article
-  [] Update Article
-  [] Destroy Article
-  [x] Routing works  
-    * Route will be based on title of article  
+  [x] Create Article  
+  [x] Read Article  
+  [] Update Article  
+  [] Destroy Article  
+  [x] Routing based on article title
 
 ## Instructions
 
