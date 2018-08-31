@@ -18,8 +18,10 @@ export class ArticleDetailComponent implements OnInit
   article: Article;
   intro: string;
   body: string[];
-  constructor(private route: ActivatedRoute, private location: Location, private articleService: ArticleService) {
+  articleKey: string;
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location, private articleService: ArticleService) {
     this.article = new Article('','',[]);
+    this.articleKey = "";
   }
 
   ngOnInit()
@@ -35,16 +37,22 @@ export class ArticleDetailComponent implements OnInit
   getArticleFromDatabase()
   {
     this.articleService.getArticles().subscribe(articleList => {
-      articleList.forEach(article => {
-        if(article.title === this.articleTitle)
+      articleList.forEach(articleObservable => {
+        if(articleObservable.title === this.articleTitle)
         {
-          console.log(article);
-          this.article = article;
+          this.article = articleObservable;
           this.intro = this.article.paragraphs.shift();
           this.body = this.article.paragraphs;
+          this.articleKey = articleObservable.$key;
         }
       });
     });
+  }
+
+  deleteArticle()
+  {
+    this.articleService.getArticles().remove(this.articleKey);
+    this.router.navigate(['']);
   }
 
 }

@@ -15,8 +15,9 @@
   [x] Create Article  
   [x] Read Article  
   [] Update Article  
-  [] Destroy Article  
+  [X] Destroy Article  
   [x] Routing based on article title
+  [] Deploy project to Firebase
 
 ## Instructions
 
