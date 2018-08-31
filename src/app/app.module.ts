@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { DatabaseComponent } from './database/database.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { routing } from './app.routing';
 import { ArticleDetailComponent } from './article-detail/article-detail.component';
@@ -22,7 +21,6 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    DatabaseComponent,
     WelcomeComponent,
     ArticleDetailComponent,
     NewArticleComponent
