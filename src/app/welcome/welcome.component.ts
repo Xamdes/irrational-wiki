@@ -4,8 +4,7 @@ import { Article } from '../models/article.model';
 import { routing } from '../app.routing';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ArticleService } from '../services/article.service';
-import { FirebaseListObservable } from 'angularfire2/database';
-import { FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { Location } from '@angular/common';
 
 @Component({
@@ -17,37 +16,37 @@ import { Location } from '@angular/common';
 export class WelcomeComponent implements OnInit
 {
   title: string = 'IrrationalWiki';
-  articles: FirebaseListObservable<any[]>;
-  articleTitle: string = "Gravity";
+  articles: Article[];
+  articleTitle: string = "Ipsum";
   article: Article;
   intro: string
+  date: Date;
+  featuredNumber: number;
 
   constructor(private router: Router, private articleService: ArticleService, private route: ActivatedRoute, private location: Location) {
+    this.articles = [];
     this.article = new Article("","");
+    this.date = new Date();
+    this.featuredNumber = this.date.getUTCFullYear()+this.date.getUTCMonth() + this.date.getUTCDate();
   }
 
   ngOnInit()
   {
-    this.articles = this.articleService.getArticles();
-    this.getArticleFromDatabase();
-  }
-
-  goToDetailPage(clickedArticle)
-  {
-    this.router.navigate(['articles', clickedArticle.title]);
-  };
-
-  getArticleFromDatabase()
-  {
-    this.articleService.getArticles().subscribe(articleList => {
-      articleList.forEach(article => {
+    this.articleService.getArticles().subscribe(articleObservables => {
+      this.articles = articleObservables;
+      let articleIndex = this.featuredNumber%this.articles.length;
+      this.articleTitle = this.articles[articleIndex].title;
+      this.articles.forEach(article => {
         if(article.title === this.articleTitle)
         {
-          console.log(article);
           this.article = article;
           this.intro = this.article.paragraphs.shift();
         }
       });
     });
   }
+}
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
