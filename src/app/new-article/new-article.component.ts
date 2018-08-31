@@ -19,7 +19,9 @@ export class NewArticleComponent {
 
   addArticle(author: string, title: string, paragraphs: string)
   {
-
+    let newArticle = new Article(title,author,paragraphs.split("\n"));
+    this.articleService.articles.push(newArticle);
+    console.log(newArticle);
   }
 
 }
