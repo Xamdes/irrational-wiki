@@ -50,12 +50,16 @@
   * Routing between different articles
     * route based on article title
   * Database to store and retrieve articles
-  * Add images for articles
-    * **Maybe**
 
   * Component List
-    * Display-Article
-
+    * Artical-Detail
+      * For Displaying the entire article
+    * Article-List
+      * List all articles user has access to
+    * New-Article
+      * Allows user to create a new article
+    * Welcome
+      * home page for welcoming users
   * Model List
     * Article
 
