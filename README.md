@@ -20,8 +20,8 @@ https://irrational-wiki.firebaseapp.com
   [x] Read Article  
   [] Update Article  
   [X] Destroy Article  
-  [x] Routing based on article title
-  [x] Deploy project to Firebase
+  [x] Routing based on article title  
+  [x] Deploy project to Firebase  
 
 ## Instructions
 
