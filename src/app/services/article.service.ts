@@ -22,22 +22,4 @@ export class ArticleService
   {
     return this.database.object('articles/' + getId)
   }
-
-  getArticleByTitle(title: string)
-  {
-    let tempArticle: Article;
-    let tempArticles = [];
-
-    this.articles.subscribe(articleList => {
-      articleList.forEach(article => {
-        if(article.title === title)
-        {
-          console.log(article);
-          return article;
-        }
-      });
-    });
-
-  }
-
 }

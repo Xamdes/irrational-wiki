@@ -15,8 +15,9 @@ import { Article } from '../models/article.model';
 export class ArticleDetailComponent implements OnInit
 {
   articleTitle: string = "";
-  articles: FirebaseListObservable<any[]>;
   article: Article;
+  intro: string;
+  body: string[];
   constructor(private route: ActivatedRoute, private location: Location, private articleService: ArticleService) { }
 
   ngOnInit()
@@ -27,17 +28,25 @@ export class ArticleDetailComponent implements OnInit
     });
     console.log(this.articleTitle);
 
+    this.getArticleFromDatabase();
+
+
+  }
+
+  // Retrieves article from database using articleTitle as search term.
+  getArticleFromDatabase()
+  {
     this.articleService.getArticles().subscribe(articleList => {
       articleList.forEach(article => {
         if(article.title === this.articleTitle)
         {
           console.log(article);
           this.article = article;
+          this.intro = this.article.paragraphs.shift();
+          this.body = this.article.paragraphs;
         }
       });
     });
-
-
   }
 
 }

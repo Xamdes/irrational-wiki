@@ -18,21 +18,36 @@ export class WelcomeComponent implements OnInit
 {
   title: string = 'IrrationalWiki';
   articles: FirebaseListObservable<any[]>;
-  articleId: string = "0";
-  articleToDisplay: Article = null;
+  articleTitle: string = "Gravity";
+  article: Article;
+  intro: string
 
-  constructor(private router: Router, private articleService: ArticleService, private route: ActivatedRoute, private location: Location) { }
+  constructor(private router: Router, private articleService: ArticleService, private route: ActivatedRoute, private location: Location) {
+    this.article = new Article("","");
+  }
 
   ngOnInit()
   {
     this.articles = this.articleService.getArticles();
-    this.articleService.getArticleById(this.articleId).subscribe(dataLastEmittedFromObserver =>
-    {
-      this.articleToDisplay = new Article(dataLastEmittedFromObserver.title, dataLastEmittedFromObserver.author, dataLastEmittedFromObserver.paragraphs);
-    });
+    this.getArticleFromDatabase();
   }
+
   goToDetailPage(clickedArticle)
   {
-    this.router.navigate(['articles', clickedArticle.$key]);
+    this.router.navigate(['articles', clickedArticle.title]);
   };
+
+  getArticleFromDatabase()
+  {
+    this.articleService.getArticles().subscribe(articleList => {
+      articleList.forEach(article => {
+        if(article.title === this.articleTitle)
+        {
+          console.log(article);
+          this.article = article;
+          this.intro = this.article.paragraphs.shift();
+        }
+      });
+    });
+  }
 }
