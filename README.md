@@ -8,6 +8,10 @@
 
 8/17/2018  
 
+## FireBase Site Links
+
+https://irrational-wiki.firebaseapp.com
+
 ## Task List
 
   [x] Can interface with firebase  
@@ -17,7 +21,7 @@
   [] Update Article  
   [X] Destroy Article  
   [x] Routing based on article title
-  [] Deploy project to Firebase
+  [x] Deploy project to Firebase
 
 ## Instructions
 
