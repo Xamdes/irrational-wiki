@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit } from '@angular/core';
+import { Article } from '../models/article.model';
+import { ArticleService } from '../services/article.service';
+import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-article-list',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
+  articles: Article[];
 
-  constructor() { }
+  constructor(private articleService: ArticleService)
+  {
+    this.articles = [];
+  }
 
   ngOnInit() {
+    this.articleService.getArticles().subscribe(articleObservables => {
+      this.articles = articleObservables;
+    });
   }
 
 }
