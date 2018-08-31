@@ -18,7 +18,9 @@ export class ArticleDetailComponent implements OnInit
   article: Article;
   intro: string;
   body: string[];
-  constructor(private route: ActivatedRoute, private location: Location, private articleService: ArticleService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private articleService: ArticleService) {
+    this.article = new Article('','',[]);
+  }
 
   ngOnInit()
   {
@@ -26,11 +28,7 @@ export class ArticleDetailComponent implements OnInit
     {
       this.articleTitle = urlParameters['id'];
     });
-    console.log(this.articleTitle);
-
     this.getArticleFromDatabase();
-
-
   }
 
   // Retrieves article from database using articleTitle as search term.

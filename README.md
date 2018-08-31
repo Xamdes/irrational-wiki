@@ -12,17 +12,16 @@
 
   [x] Can interface with firebase  
   [x] Can read files from database  
-  [] CRUD not completey implemented  
-    * Create, Read, Update, Destroy  
+  [x] Create Article
+  [x] Read Article
+  [] Update Article
+  [] Destroy Article
   [x] Routing works  
     * Route will be based on title of article  
-      * spaces will be represented by underscores _  
-  [] Add Users  
-  [] Images  
 
 ## Instructions
 
-  * Clone project from https://github.com/Xamdes/irrational-wiki.git 
+  * Clone project from https://github.com/Xamdes/irrational-wiki.git
   * Go to firebase
   * Create a Realtime Database
     * Database should be named "irrational-wiki"
@@ -36,12 +35,11 @@
       > storageBucket: "xxxx",  
       > messagingSenderId: "xxxx"  
       > };  
-  * Run Project using ng serve --open
+  * Run Project using npm install; ng serve --open
 
 ## Specs
 
   * Website will be based on the RationalWiki at https://rationalwiki.org/wiki/Main_Page
-    * Making website with irrational content though.
   * Build main page structure
   * Random Featured Article
   * About the purpose for the wiki
@@ -49,8 +47,8 @@
   * Feature Content Section
   * Portals and Articles Section
     * Separated content based on an overall theme
-
   * Routing between different articles
+    * route based on article title
   * Database to store and retrieve articles
   * Add images for articles
     * **Maybe**

@@ -1,5 +1,15 @@
-<h2>This artles title is: {{articleTitle}}</h2>
-<p>{{intro}}</p>
-<div class="" *ngFor="let paragraph of body">
-  <p>{{paragraph}}</p>
+<div class="card">
+
+  <div class="card-title center-middle">
+    <h2>{{articleTitle}}</h2>
+  </div>
+  <div class="card-body">
+    <p>{{intro}}</p>
+    <div class="" *ngFor="let paragraph of body">
+      <p>{{paragraph}}</p>
+    </div>
+  </div>
+  <div class="card-footer">
+    <h3>By {{article.author}}</h3>
+  </div>
 </div>

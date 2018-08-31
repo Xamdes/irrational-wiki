@@ -21,7 +21,7 @@ export class NewArticleComponent {
   {
     let newArticle = new Article(title,author,paragraphs.split("\n"));
     this.articleService.articles.push(newArticle);
-    console.log(newArticle);
+    this.router.navigate(['']);
   }
 
 }
